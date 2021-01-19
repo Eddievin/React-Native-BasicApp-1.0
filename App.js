@@ -1,22 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import HomeStackNavigator from './src/navigation/Navigator';
+import {NavigationContainer} from '@react-navigation/native';
 
-export default class App extends React.Component{
-render(){
+export default function App(){
   return(
-    <View style={styles.container}>
-    <View>
-      <Text>Write Here</Text>
-    </View>
-  </View>
-  ); 
+    <NavigationContainer>
+      <HomeStackNavigator />
+    </NavigationContainer>
+  );
 }
-}
-
-const styles = StyleSheet.create({
- container:{
-   justifyContent:'center',
-   alignItems:'center',
-   flex: 1,
- }
-})
